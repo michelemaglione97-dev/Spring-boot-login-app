@@ -23,8 +23,6 @@ Il progetto è strutturato seguendo il pattern MVC e una pulita separazione dell
    ```bash
    git clone [https://github.com/michelemaglione97-dev/Spring-boot-login-app.git](https://github.com/michelemaglione97-dev/Spring-boot-login-app.git)
 
-```
-
 2. **Configura il Database MySQL:**
 * Crea un database MySQL sul tuo server locale.
 * Configura le credenziali di accesso nel file `src/main/resources/application.properties`:
