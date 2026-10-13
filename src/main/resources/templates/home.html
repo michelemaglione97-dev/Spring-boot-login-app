@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org"> <!--  import della libreria  -->
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Spring Step 01</title>
+  </head>
+  <body>
+    <span th:if="${msg!=null and dip==null}">
+    <h3 th:text="${msg}"></h3>
+    </span>
+    
+    <div id="welcome-msg" th:if="${dip !=null}"> <!-- se non è null mi torna questo messaggio vedi in controller -->
+    <span class="fw-bold" th:text="${msg}"></span> <!-- stampa messaggio -->
+    <span class="fw-bold" th:text="${dip.nome+ ' ' +dip.cognome}"></span> <!-- stampa nome e cognome dell'oggetto persona -->
+    
+    
+    </div>
+    <h2><b>HOME</b></h2>
+    <a class="btn btn-primary" href="/new"> INSERIMENTO </a>
+     <a class="btn btn-primary" href="/gestione"> GESTISCI </a>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script th:src="@{/scripts.js}"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
